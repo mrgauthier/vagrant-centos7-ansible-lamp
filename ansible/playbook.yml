@@ -8,4 +8,4 @@
     #- php56
     - php70
     - mysql
-    - phpmyadmin
+    - nodejs
