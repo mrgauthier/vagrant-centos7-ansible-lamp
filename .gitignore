@@ -2,3 +2,4 @@
 .vagrant/*
 .idea/*
 audit/reports/*
+app/*

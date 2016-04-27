@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network :forwarded_port, guest: 3306, host: 3306, auto_correct: true # mysql
     config.vm.network :forwarded_port, guest: 9000, host: 9000, auto_correct: true # phpmyadmin
     config.vm.network :private_network, ip: "10.0.0.10"
-    config.vm.synced_folder "./app", "/var/www/html", :create => "true", :mount_options => ['dmode=755', 'fmode=644']
+    config.vm.synced_folder "./app", "/var/www/html", :create => "true", :mount_options => ['dmode=775', 'fmode=664'], :group => 'apache'
 
     config.vm.provider "virtualbox" do |vb|
         vb.gui = false
